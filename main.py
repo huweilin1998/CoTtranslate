@@ -206,6 +206,7 @@ class TranslationAssistant:
     def _generate_basic_prompt(self, abstract: str, word_dict: Dict) -> str:
         """Generate basic prompt for single abstract."""
         for key in word_dict:
+            key = key.split('(')[0]
             abstract = abstract.replace(key, f'[{key}]')
 
         prompt_parts = [
@@ -223,6 +224,7 @@ class TranslationAssistant:
         """Generate prompt including both abstract and main text."""
         main_text = self.remove_brackets(main_text)
         for key in word_dict:
+            key = key.split('(')[0]
             abstract = abstract.replace(key, f'[{key}]')
             main_text = main_text.replace(key, f'[{key}]')
 
