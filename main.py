@@ -974,8 +974,8 @@ class TranslationAssistant:
 
 # Usage example with info preservation
 if __name__ == "__main__":
-    API_KEY = "sk-KIsbVOoWFKSzHJOHD11f309d6e9a4b36913c774290287b8d"
-    API_BASE = "https://api.b3n.fun/v1"
+    API_KEY = ""
+    API_BASE = ""
 
     # Initialize with default settings
     assistant = TranslationAssistant(
